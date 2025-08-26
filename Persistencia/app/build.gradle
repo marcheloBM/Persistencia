@@ -1,15 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    namespace 'cl.duoc.android.persistencia' // Replace with your actual package name
+    compileSdk 34 // Example, ensure this is set appropriately
 
     defaultConfig {
-        applicationId "cl.duoc.android.persistencia"
-        minSdkVersion 15
-        targetSdkVersion 24
+        applicationId "cl.duoc.android.persistencia" // Ensure this matches or is derived appropriately
+        minSdk 21 // Example
+        targetSdk 34 // Example
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -20,7 +22,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.1.1'
+    implementation fileTree(dir: 'libs', include: ['*.jar']) // Or implementation(directory('libs'))
+    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 }
