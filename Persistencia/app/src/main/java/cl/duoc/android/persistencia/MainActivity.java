@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         if(checkearCredenciales(usuario, password)){
             irActividad(MantenedorActivity.class);
         }
+        // Verificar actualización al iniciar
+        UpdateChecker.checkForUpdate(this);
     }
 
     private void irActividad(Class cls) {

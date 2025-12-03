@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cl.duoc.android.persistencia">
 
+    <!-- Permiso necesario para acceder a Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <!-- tiene el permiso de lectura implícito -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     
     <application
         android:allowBackup="true"
